@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="bg-black bg-opacity-30 backdrop-blur-lg fixed w-full z-20 top-0 start-0 border-b border-gray-800">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3">
-          <img src="/logo-transparent.png" className="h-10" alt="BSR Films Logo" />
+          <img src="/logo-transparent.png" className="h-20" alt="BSR Films Logo" />
         </a>
         <div className="flex md:order-2">
           <button type="button" onClick={() => setIsOpen(!isOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600">
