@@ -54,10 +54,9 @@ const Clients = () => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">
-            Our Major Clients
-          </h2>
+Trusted By The Best          </h2>
           <p className="mt-4 text-xl text-gray-400">
-            Trusted by government, corporate, and private sectors.
+            Our work has earned the trust of the nation's most respected institutions, from global NGOs to key government bodies. We are proud to be the creative force behind their stories.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

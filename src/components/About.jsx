@@ -13,10 +13,10 @@ const About = () => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">
-            About Us
+            Our Philosophy: More Than Media
           </h2>
           <p className="mt-4 text-xl text-gray-400">
-            A trusted name in creative storytelling with purpose.
+            For over two decades, our mission has been clear: to create with purpose. We believe that the most powerful stories are those that educate, inspire, and drive meaningful change. At BSR Films, we are more than a production house; we are a platform for hidden talent and a hub for innovation. By blending timeless cultural storytelling with world-class technology, we don't just produce content—we build connections and foster universal growth.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">

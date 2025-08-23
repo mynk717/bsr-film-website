@@ -13,16 +13,16 @@ const Hero = () => {
 
       <div className="relative z-20 p-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
-          Creative Storytelling with Purpose
+          Shaping Narratives. Crafting Legacies.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mx-auto animate-fade-in-up">
-          BSR Films is a leading media production house creating innovative and impactful audio-visual content.
+          From the heart of Chhattisgarh, BSR Films is a powerhouse of creative production, translating impactful ideas into unforgettable audio-visual experiences for government, corporate, and global partners.
         </p>
         <a
   href="https://www.youtube.com/@bsrfilmsoriginal2461/videos"
   target="_blank"
   rel="noopener noreferrer"
-  className="mt-8 inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-transform duration-300 hover:scale-105 animate-fade-in-up"
+  className="mt-8 inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-700 text-white rounded-lg font-semibold transition-transform duration-300 hover:scale-105 animate-fade-in-up"
   style={{ animationDelay: '0.8s' }}
 >
   Explore Our Work

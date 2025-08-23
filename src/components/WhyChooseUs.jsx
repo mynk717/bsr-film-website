@@ -3,11 +3,22 @@ import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
   const points = [
-    "25+ Years of Experience",
-    "Trusted by Government, Corporates & NGOs",
-    "Blend of Creativity & Technical Excellence",
-    "Full-Facility Production House",
-    "Passion for Storytelling & Social Responsibility"
+    {
+      title: "Decades of Mastery",
+      text: "With over 25 years of hands-on experience, we bring unparalleled expertise and insight to every project."
+    },
+    {
+      title: "Proven Trust",
+      text: "As an empanelled partner for government departments, global NGOs, and leading corporations, our reliability is our reputation."
+    },
+    {
+      title: "Artistry Meets Technology",
+      text: "We seamlessly blend creative passion with technical excellence in our state-of-the-art, full-facility production house."
+    },
+    {
+      title: "Driven by Purpose",
+      text: "We are passionate storytellers committed to social responsibility, ensuring your message not only gets seen, but felt."
+    }
   ];
 
   return (
@@ -26,9 +37,12 @@ const WhyChooseUs = () => {
         <div className="max-w-3xl mx-auto">
           <ul className="space-y-4">
             {points.map((point, index) => (
-              <li key={index} className="flex items-center text-lg bg-gray-800 p-4 rounded-lg">
-                <span className="text-green-400 mr-4 text-2xl">✔</span>
-                <p>{point}</p>
+              <li key={index} className="flex items-start text-lg bg-gray-800 p-6 rounded-lg">
+                <span className="text-green-400 mr-4 text-2xl mt-1">✔</span>
+                <div>
+                  <h3 className="font-bold text-white">{point.title}</h3>
+                  <p className="text-gray-400">{point.text}</p>
+                </div>
               </li>
             ))}
           </ul>
