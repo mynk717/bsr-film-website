@@ -1,35 +1,25 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const serviceList = [
-    {
-      title: "Films & Videos",
-      description: "Documentaries, Corporate Films, Ad Films, TV Commercials, Web Content."
-    },
-    {
-      title: "Audio Production",
-      description: "Radio Jingles, Radio Serials, and Songs (Audio & Video)."
-    },
-    {
-      title: "Creative & Digital",
-      description: "Animation, VFX, Social Media Handling, and Graphic Designing."
-    },
-    {
-      title: "Political Campaigns",
-      description: "End-to-end media solutions for political campaigns and outreach."
-    },
-    {
-      title: "Events & Outreach",
-      description: "PR Campaigns, Workshops, and Orientation Programs."
-    },
-    {
-      title: "Technology",
-      description: "Mobile Apps, Technical Upgrades, and Content Partnerships."
-    },
+    { title: "Films & Videos", description: "Documentaries, Corporate Films, Ad Films, TV Commercials, Web Content." },
+    { title: "Audio Production", description: "Radio Jingles, Radio Serials, and Songs (Audio & Video)." },
+    { title: "Creative & Digital", description: "Animation, VFX, Social Media Handling, and Graphic Designing." },
+    { title: "Political Campaigns", description: "End-to-end media solutions for political campaigns and outreach." },
+    { title: "Events & Outreach", description: "PR Campaigns, Workshops, and Orientation Programs." },
+    { title: "Technology", description: "Mobile Apps, Technical Upgrades, and Content Partnerships." },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-800 text-white">
+    <motion.section
+      id="services"
+      className="py-20 bg-gray-800 text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">
@@ -48,7 +38,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

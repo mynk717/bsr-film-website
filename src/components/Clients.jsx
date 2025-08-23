@@ -1,9 +1,20 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Clients = () => {
+  // Update this list with your client names and URLs
+  // Use 'null' for the URL if you don't want a client name to be a link
   const majorClients = [
-    "World Bank", "NABARD", "UNICEF", "SHRC", "CHRI", "IFFCO",
-    "Birla Group", "DDUGKY", "SRLM", "PRIYA NGO"
+    { name: "World Bank", url: "https://www.worldbank.org" },
+    { name: "NABARD", url: "https://www.nabard.org" },
+    { name: "UNICEF", url: "https://www.unicef.org" },
+    { name: "SHRC", url: null },
+    { name: "CHRI", url: null },
+    { name: "IFFCO", url: "https://www.iffco.in" },
+    { name: "Birla Group", url: "https://www.adityabirla.com" },
+    { name: "DDUGKY", url: null },
+    { name: "SRLM", url: null },
+    { name: "PRIYA NGO", url: null }
   ];
 
   const govDepartments = [
@@ -14,8 +25,32 @@ const Clients = () => {
     "Chhattisgarh Women Commission"
   ];
 
+  const ClientTag = ({ client }) => {
+    const content = (
+      <div className={`bg-gray-800 py-2 px-4 rounded-full text-sm whitespace-nowrap ${client.url ? 'hover:bg-blue-600 transition-colors' : ''}`}>
+        {client.name}
+      </div>
+    );
+
+    if (client.url) {
+      return (
+        <a href={client.url} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      );
+    }
+    return content;
+  };
+
   return (
-    <section id="clients" className="py-20 bg-gray-900 text-white">
+    <motion.section
+      id="clients"
+      className="py-20 bg-gray-900 text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">
@@ -25,32 +60,30 @@ const Clients = () => {
             Trusted by government, corporate, and private sectors.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Major Clients */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Esteemed Organizations</h3>
-            <ul className="space-y-3">
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               {majorClients.map((client, index) => (
-                <li key={index} className="bg-gray-800 p-3 rounded-md">
-                  {client}
-                </li>
+                <ClientTag key={index} client={client} />
               ))}
-            </ul>
+            </div>
           </div>
           {/* Column 2: Government Departments */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Government Departments (Chhattisgarh)</h3>
-            <ul className="space-y-3">
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               {govDepartments.map((dept, index) => (
-                <li key={index} className="bg-gray-800 p-3 rounded-md">
+                <div key={index} className="bg-gray-800 py-2 px-4 rounded-full text-sm whitespace-nowrap">
                   {dept}
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

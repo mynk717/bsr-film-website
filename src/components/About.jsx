@@ -1,8 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // 1. Import motion
+
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-900 text-white">
+    <motion.section id="about" 
+      className="py-20 bg-gray-900 text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">
@@ -41,7 +48,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Facilities = () => {
   const facilitiesList = [
@@ -8,7 +9,14 @@ const Facilities = () => {
   ];
 
   return (
-    <section id="facilities" className="py-20 bg-gray-800 text-white">
+    <motion.section
+      id="facilities"
+      className="py-20 bg-gray-800 text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">Our Facilities</h2>
@@ -24,7 +32,7 @@ const Facilities = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
