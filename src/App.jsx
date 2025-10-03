@@ -9,19 +9,21 @@ import Footer from './components/Footer'; // Import
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-gray-900 text-white dark:bg-white dark:text-black transition-colors duration-300">
       <Navbar />
       <main>
         <Hero />
         <About />
         <Services />
         <Clients />
-        <Facilities /> {/* Add here */}
-        <WhyChooseUs /> {/* Add here */}
+        <Facilities />
+        <WhyChooseUs />
       </main>
-      <Footer /> {/* Add here */}
+      <Footer />
     </div>
   )
 }
+
+
 
 export default App;
